@@ -113,7 +113,7 @@
 		<div id="Task" class="tabcontent">
 			<form name="addTask">
 			<h4 style="color: #888; text-align: center;font-size: 20px;">Tasks</h4>
-			<input type="text" placeholder="Name" name="tname"/><br>
+			<input type="text" placeholder="Name" name="Task"/><br>
 			<input type="date" placeholder="Date" /><br>
 			<input type="text" placeholder="Priority" /><br>
 			<textarea placeholder="Notes"></textarea><br>

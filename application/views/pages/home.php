@@ -11,7 +11,9 @@
         <a class="mainNav" href="index.html">Home</a>
         <a class="mainNav" href="aboutus.html">About Us</a>
         <a class="mainNav" href="contact.html">Contact</a><br>
-        <a id="addbtn" href="<?php echo base_url();?>posts/add2">Add</a>
+        <a id="addbtn" href="<?php echo base_url();?>add">Add</a>
+        <a id="addbtn" href="<?php echo base_url();?>signup">Sign Up</a>
+        <a id="addbtn" href="<?php echo base_url();?>login">Log In</a>
     </div>
     <style>
     	.navbar{
@@ -22,6 +24,7 @@
 			float: right; 
 			text-decoration: none;
 			padding-right:20px;
+      color: #888;
 		}
 		.mainNav{
      		float:left;

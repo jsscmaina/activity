@@ -4,18 +4,17 @@
 			$data['title'] = 'Latest tasks';
 
 			$data['tasks'] = $this->Task_model->get_tasks();
-			$this -> load ->views('posts/index', $data);
+			$this->load->view('posts/index', $data);
 		}
 
 		public function view($slug = NULL){
-			$data['tasks'] = $this->Task_model-> get_tasks($slug);
+			$data['title'] = $this->Task_model-> get_tasks($slug);
 			if(empty($data['tasks'])){
 				show_404();
 			}
-			$data['title'] = $data['tasks']['title'];
-			$this -> load ->views('templates/header'); 
-			$this -> load ->views('posts/view', $data);
-			$this -> load ->views('templates/footer');
+			$data['task'] = $data['tasks']['task'];
+			$this->load->view('posts/view', $data);
+			$this->load->view('templates/footer');
 		}
 
 		public function create(){
@@ -24,8 +23,8 @@
 			$this->form_validation->set_rules('priority','Priority','required');
 
 			if($this->form_validation->run === FALSE){
-				$this -> load ->views('posts/add2', $data);
-				$this -> load ->views('templates/footer');
+				$this ->load->view('pages/add', $data);
+				$this ->load->view('templates/footer');
 
 			}else{
 				$this->Task_model->add_task();
